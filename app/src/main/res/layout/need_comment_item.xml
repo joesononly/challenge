@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="20px"
+    >
+    <ImageView
+        android:id="@+id/needMinUserImage"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@color/needHeader"
+        />
+    <RelativeLayout
+        android:layout_below="@+id/needMinUserImage"
+        android:layout_marginTop="20px"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/needHeader"
+        >
+        <TextView
+            android:id="@+id/needUserProblem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="20dp"
+            android:text="具体怎样做"
+            android:textColor="@color/needUserProblem"
+            />
+        <ImageView
+            android:id="@+id/businessImage"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/needUserProblem"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/black"
+            />
+        <TextView
+            android:id="@+id/businessAnswer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@+id/needUserProblem"
+            android:layout_toRightOf="@+id/businessImage"
+            android:text="在家做就可以了xxxxxxxxxxx"
+            android:layout_marginBottom="10dp"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

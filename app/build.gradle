@@ -1,0 +1,61 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+def AAVersion = '3.3.2'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "25.0.2"
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+    defaultConfig {
+        applicationId "com.example.joesn.myapplication"
+        minSdkVersion 21
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    testCompile 'junit:junit:4.12'
+    compile files('libs/androidsvg-1.2.1.jar')
+    compile 'com.eftimoff:android-pathview:1.0.6@aar'
+    //AndroidAnnotation框架
+    apt "org.androidannotations:androidannotations:$AAVersion"
+    compile "org.androidannotations:androidannotations-api:$AAVersion"
+    //MaterialTabs 滑动第三方插件
+    compile 'it.neokree:MaterialTabs:0.11'
+    //RxVolley网络框架
+    compile 'com.kymjs.rxvolley:rxvolley:1.1.4'
+    //CircleImageView圆形控件
+//    compile 'de.hdodenhof:circleimageview:2.1.0'
+    //timeLineView 时间轴控件
+    compile 'com.github.vipulasri:timelineview:1.0.3'
+    //RecyclerView控件
+    compile 'com.android.support:recyclerview-v7:24.2.1'
+}
+apt {
+    arguments {
+        androidManifestFile variant.outputs[0].processResources.manifestFile
+        // if you have multiple outputs (when using splits), you may want to have other index than 0
+
+        // you should set your package name here if you are using different application IDs
+        // resourcePackageName "lzl.edu.com.firstannitation"
+
+        // You can set optional annotation processing options here, like these commented options:
+        //  logLevel 'INFO'
+        // logFile '/var/log/aa.log'
+    }
+}

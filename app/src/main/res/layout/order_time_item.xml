@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <com.vipul.hp_hp.timelineview.TimelineView
+        android:id="@+id/time_marker"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:marker="@drawable/mark"
+        app:marker_size="25dp"
+        app:line_size="2dp"
+        app:line="@color/blue"/>
+    <TextView
+        android:id="@+id/orderSchedule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/orderLeftLine"
+        android:background="@drawable/talk"
+        android:text="开始时间:2017/2/6" />
+
+</LinearLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        style="@style/LineType"
+        android:id="@+id/needTopLine"
+        android:layout_width="1px"
+        android:layout_height="70px"
+        />
+    <ImageView
+        android:id="@+id/needComment"
+        android:layout_width="80px"
+        android:layout_height="80px"
+        android:layout_marginLeft="53px"
+        android:layout_marginTop="70px"
+        android:background="@drawable/comment"
+        />
+    <View
+        style="@style/LineType"
+        android:id="@+id/needLeftLine"
+        android:layout_width="1px"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/needComment"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/needComment"
+        android:textColor="@color/needTitle"
+        android:textSize="26dp"
+        android:layout_marginLeft="53px"
+        android:layout_marginTop="70px"
+        android:text="具体信息"
+        />
+    <TextView
+        android:id="@+id/needCommentInfo"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/needComment"
+        android:textColor="@color/userName"
+        android:textSize="15dp"
+        android:layout_marginLeft="53px"
+        android:layout_marginTop="150px"
+        android:text="现在需要会活动logo设计和纪念品设计的，
+        工作地点不限
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+        />
+
+    <View
+        style="@style/LineType"
+        android:layout_width="990px"
+        android:layout_height="1px"
+        android:layout_below="@+id/needCommentInfo"
+        android:layout_marginTop="100px"
+        />
+</RelativeLayout>

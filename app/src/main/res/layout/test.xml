@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/needPrice"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="160dp"
+            android:background="#000000"
+            android:alpha="0.73"
+            />
+        <TextView
+            android:id="@+id/needName"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="160dp"
+            android:textColor="#ffffff"
+            android:gravity="center_vertical"
+            android:text="活动logo和纪念品"
+            android:textSize="30dp"
+            />
+    </RelativeLayout>
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:layout_height="wrap_content" >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <include
+                layout="@layout/need_home_info"/>
+            <include
+                layout="@layout/need_home_comment"/>
+            <include
+                layout="@layout/need_home_buttom"/>
+
+        </LinearLayout>
+</ScrollView>
+</LinearLayout>

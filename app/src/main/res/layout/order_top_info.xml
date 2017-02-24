@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/blue"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/orderName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="45px"
+        android:text="活动设计"
+        android:textColor="@color/white"
+        android:textSize="15dp" />
+
+    <View
+        android:id="@+id/topLine"
+        android:layout_width="fill_parent"
+        android:layout_height="2px"
+        android:layout_below="@+id/orderName"
+        android:layout_marginLeft="45px"
+        android:layout_marginRight="45px"
+        android:background="@color/white" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topLine"
+        android:layout_marginLeft="45px"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/master"
+            style="@style/OrderImage"
+            android:layout_below="@+id/topLine"
+            android:background="@drawable/girl" />
+
+        <TextView
+            android:id="@+id/orderUserName"
+            style="@style/OrderTextSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Joeson"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/orderUseTime"
+            style="@style/OrderTextSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="用时:一天"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/orderStarTime"
+            style="@style/OrderTextSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开始日期:2017/2/5"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/topLine"
+        android:layout_marginRight="45px"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            style="@style/OrderImage"
+            android:background="@drawable/boy" />
+
+        <TextView
+            android:id="@+id/orderWorkerName"
+            style="@style/OrderTextSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stanger"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/orderPlace"
+            style="@style/OrderTextSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="地点:华软"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/orderCost"
+            style="@style/OrderTextSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="费用:300/次"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+
+</RelativeLayout>
